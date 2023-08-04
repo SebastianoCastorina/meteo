@@ -28,7 +28,7 @@ export class HomeComponent {
     this.cityUrl =
       'http://api.openweathermap.org/geo/1.0/direct?q=' +
       city +
-      '&limit=5&appid=82d51459107d378b1d35e2f90cd5f077';
+      '&limit=5&appid=';
     this.getCity(this.cityUrl);
     this.weatherSvc
       .getWeather(
@@ -36,7 +36,7 @@ export class HomeComponent {
           this.weatherSvc.searchedCity[0].lat +
           '&lon=' +
           this.weatherSvc.searchedCity[0].lon +
-          '&appid=82d51459107d378b1d35e2f90cd5f077&units=metric'
+          '&appid=&units=metric'
       )
       .subscribe((city) => {
         this.city = city as IGeneral;
